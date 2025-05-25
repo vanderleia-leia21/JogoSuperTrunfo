@@ -15,7 +15,7 @@ float PIBpercapita1; PIBpercapita2;
 
  //entrada de dados
  printf("Desafio Super Tunfo- Países\n");
- printf("Olá, seja bem vindo!\n");
+ printf("\nOlá, seja bem vindo!\n");
  printf("Escolha sua carta\n");
  printf("Digite carta1 ou carta2\n");
  scanf("&carta1\n");
