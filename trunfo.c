@@ -39,6 +39,10 @@ float PIBpercapita1; PIBpercapita2;
  scanf("%2f", &PIB1); //para a primeira carta
  printf("Pontos turísticos:67 \n");
  scanf("%d\n", &turisticos1);
+ printf("Densidade1:%2f\n");
+ scanf("%2f\n", densidade1);
+ printf("PIBpercapita1:%2f\n");
+ scanf("%2f\n", PIBpercapita1);
 
 //Cadastro da segunda carta
  printf("\nCARTA 2:\n");
@@ -56,6 +60,16 @@ float PIBpercapita1; PIBpercapita2;
  scanf("%2f", &PIB2); //para a segunda carta
  printf("Pontos turísticos:43\n" );
  scanf("%s", &turisticos2);
+ printf("Densidade2:%2f\n");
+ scanf("%2f\n", densidade2);
+ printf("PIBpercapita:%2f\n");
+ scanf("%2f\n", PIBpercapita2);
+
+//Cálculos das variavéis
+densidade1 = populacao1/area1;
+densidade2 = populacao2/area2;
+PIBpercapita1 = PIB1 *1000000 /populacao1;
+PIBpercapita2 = PIB2 *1000000/populacao2;
 
  //Se escolher a carta1 
 scanf("Se escolher a primeira carta exibir= Os dados da Primeira Carta");
@@ -67,6 +81,8 @@ scanf("populacão: %d\n", populacao1);
 scanf("area: %e\n", area1);
 scanf("PIB: %2f\n", PIB1);
 scanf("pontos turisticos:%s\n",turisticos1);
+scanf("densidade:%2f\n", densidade1);
+sacnf("PIBpercapita:%2f\n", PIBpercapita2);
 
 //se escolher a carta2 
  scanf("Se escolher a sedunda carta exibir= Os Dados da Segunda Carta");
@@ -78,7 +94,8 @@ scanf("pontos turisticos:%s\n",turisticos1);
  scanf("area:%e\n", area2);
  scanf("PIB: %2f\n", PIB2);
  scanf("pontos turisticos:%s\n",turisticos2);
-
+ scanf("densidade:%2f\n", densidade2);
+ scanf("PIBpercapita:%2f", PIBpercapita2);
 
  // final do jogo super trunfo
  scanf("final do jogo\n");
