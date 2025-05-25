@@ -9,7 +9,7 @@ int populacao1, populacao2;
 float area1, area2;
 float PIB1, PIB2;
 int turisticos1, turisticos2;
-//variáveis calculavéis
+//variáveis de cálculos
 float densidade1, densidade2;
 float PIBpercapita1; PIBpercapita2;
 
