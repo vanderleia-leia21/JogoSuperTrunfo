@@ -9,12 +9,15 @@ int populacao1, populacao2;
 float area1, area2;
 float PIB1, PIB2;
 int turisticos1, turisticos2;
+//variáveis calculavéis
+float densidade1, densidade2;
+float PIBpercapita1; PIBpercapita2;
 
  //entrada de dados
  printf("Desafio Super Tunfo- Países\n");
  printf("Olá, seja bem vindo!\n");
- printf("Escolha sua carta, carta1 ou carta2\n");
- printf("digite carta1 ou carta2 \n");
+ printf("Escolha sua carta\n");
+ printf("Digite carta1 ou carta2\n");
  scanf("&carta1\n");
  scanf("&carta2\n");
 
