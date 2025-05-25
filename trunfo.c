@@ -11,7 +11,7 @@ float PIB1, PIB2;
 int turisticos1, turisticos2;
 //variáveis de cálculos
 float densidade1, densidade2;
-float PIBpercapita1; PIBpercapita2;
+float PIBPerCapita1; pibPerCapita2;
 
  //entrada de dados
  printf("Desafio Super Tunfo- Países\n");
@@ -20,7 +20,6 @@ float PIBpercapita1; PIBpercapita2;
  printf("Digite carta1 ou carta2\n");
  scanf("&carta1\n");
  scanf("&carta2\n");
-
 
  //cadastro da primeira carta 
 
@@ -42,7 +41,7 @@ float PIBpercapita1; PIBpercapita2;
  printf("Densidade1:%2f\n");
  scanf("%2f\n", densidade1);
  printf("PIBpercapita1:%2f\n");
- scanf("%2f\n", PIBpercapita1);
+ scanf("%2f\n", PIBPerCapita1);
 
 //Cadastro da segunda carta
  printf("\nCARTA 2:\n");
@@ -63,15 +62,22 @@ float PIBpercapita1; PIBpercapita2;
  printf("Densidade2:%2f\n");
  scanf("%2f\n", densidade2);
  printf("PIBpercapita:%2f\n");
- scanf("%2f\n", PIBpercapita2);
+ scanf("%2f\n", PIBPerCapita2);
 
-//Cálculos das variavéis
+ //operacao de divisao
+    float calcularMedia(){
 densidade1 = populacao1/area1;
 densidade2 = populacao2/area2;
 PIBpercapita1 = PIB1 *1000000 /populacao1;
-PIBpercapita2 = PIB2 *1000000/populacao2;
+PIBpercapita2 = PIB2 *1000000/populacao2; 
+   printf("A divisão é: %2f:\n", divisao);
+   printf("A divisão é: %2f:\n", divisao);
+   printf("A divisão é: %2f:\n", divisao);
+   printf("A divisão é: %2f:\n", divisao);
 
- //Se escolher a carta1 
+}
+
+ //exibicao da carta1 
 scanf("Se escolher a primeira carta exibir= Os dados da Primeira Carta");
 scanf("Carta1\n");
 scanf("estado: %d\n", estado1);
@@ -82,9 +88,9 @@ scanf("area: %e\n", area1);
 scanf("PIB: %2f\n", PIB1);
 scanf("pontos turisticos:%s\n",turisticos1);
 scanf("densidade:%2f\n", densidade1);
-sacnf("PIBpercapita:%2f\n", PIBpercapita2);
+sacnf("PIBpercapita:%2f\n", PIBPerCapita1);
 
-//se escolher a carta2 
+//exibicao da carta2 
  scanf("Se escolher a sedunda carta exibir= Os Dados da Segunda Carta");
  scanf("carta2\n"); 
  scanf("estado2:%d\n", estado2);
@@ -95,7 +101,7 @@ sacnf("PIBpercapita:%2f\n", PIBpercapita2);
  scanf("PIB: %2f\n", PIB2);
  scanf("pontos turisticos:%s\n",turisticos2);
  scanf("densidade:%2f\n", densidade2);
- scanf("PIBpercapita:%2f", PIBpercapita2);
+ scanf("PIBpercapita:%2f", PIBPerCapita2);
 
  // final do jogo super trunfo
  scanf("final do jogo\n");
