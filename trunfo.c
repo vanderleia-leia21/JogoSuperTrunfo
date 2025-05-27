@@ -64,16 +64,26 @@ float PIBPerCapita1; pibPerCapita2;
  printf("PIBpercapita:%2f\n");
  scanf("%2f\n", PIBPerCapita2);
 
- //operacao de divisao
-    float calcularMedia(){
-densidade1 = populacao1/area1;
-densidade2 = populacao2/area2;
-PIBpercapita1 = PIB1 *1000000 /populacao1;
-PIBpercapita2 = PIB2 *1000000/populacao2; 
-   printf("A divisão é: %2f:\n", divisao);
-   printf("A divisão é: %2f:\n", divisao);
-   printf("A divisão é: %2f:\n", divisao);
-   printf("A divisão é: %2f:\n", divisao);
+      //cálculo da densidade populacional
+densidade1 = 34316000/658190,05;
+densidade2 = 5168009/4329003,62;
+      //cálculo do PIBpercapita 
+      switch (unidadePIB) {
+      case 1: // Milhões 
+       PIBpercapita1 = PIB1 *1000000 /34316000;
+PIBpercapita2 = PIB2 *1000000/5168009; 
+         break;
+      case 2: Trilhões
+      PIBpercapita1 = PIB1 *1000000000000 /34316000;
+PIBpercapita2 = PIB2 *1000000000000/5168009;
+         break;
+      }
+PIBpercapita1 = PIB1 *1000000 /34316000;
+PIBpercapita2 = PIB2 *1000000/5168009; 
+   printf("A divisão é: %2f had/km²\n", divisao);
+   printf("A divisão é: %2fhad/km²\n", divisao);
+   printf("A divisão é: R$%2f\n", divisao);
+   printf("A divisão é: R$%2f\n", divisao);
 
 }
 
