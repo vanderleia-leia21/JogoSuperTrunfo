@@ -1,25 +1,26 @@
 #include <stdio.h>
 
-// declaração das variáveis para as duas cartas
-int main(){ 
-char estado1, estado2 [50];
-char codigo1, codigo2[50];
-char cidade1, cidade2[50];
-int populacao1, populacao2;
-float area1, area2;
-float PIB1, PIB2;
-int turisticos1, turisticos2;
-//variáveis de cálculos
-float densidade1, densidade2;
-float PIBPerCapita1; pibPerCapita2;
+int main() {
+
+ // declaração das variáveis para as duas cartas
+   char estado1, estado2 [50];
+   char codigo1, codigo2[50];
+   char cidade1, cidade2[50];
+   int populacao1, populacao2;
+   float area1, area2;
+   float PIB1, PIB2;
+   int turisticos1, turisticos2;
+   int escolha;
+
 
  //entrada de dados
  printf("Desafio Super Tunfo- Países\n");
- printf("\nOlá, seja bem vindo!\n");
- printf("Escolha sua carta\n");
- printf("Digite carta1 ou carta2\n");
+ printf("Olá, seja bem vindo!\n");
+ printf("Escolha sua carta, carta1 ou carta2\n");
+ printf("digite carta1 ou carta2 \n");
  scanf("&carta1\n");
  scanf("&carta2\n");
+
 
  //cadastro da primeira carta 
 
@@ -34,16 +35,12 @@ float PIBPerCapita1; pibPerCapita2;
  scanf("%d", &populacao1);
  printf("Área:658190,05 km²\n");
  scanf("%e", &area1);
- printf("PIB1:2009753.89 Milhões de Reais\n");
+ printf("PIB1:2009753.89 R$\n");
  scanf("%2f", &PIB1); //para a primeira carta
  printf("Pontos turísticos:67 \n");
  scanf("%d\n", &turisticos1);
- printf("Densidade1:%2f\n");
- scanf("%2f\n", densidade1);
- printf("PIBpercapita1:%2f\n");
- scanf("%2f\n", PIBPerCapita1);
 
-//Cadastro da segunda carta
+ //Cadastro da segunda carta
  printf("\nCARTA 2:\n");
  printf("Estado:B\n");
  scanf("%d", &estado2);
@@ -55,67 +52,50 @@ float PIBPerCapita1; pibPerCapita2;
  scanf("%d", populacao2);
  printf("Área: 4329003,62 km²\n" );
  scanf("%e", &area2);
- printf("PIB2:8400432.2 Trilhões de Reais\n");
+ printf("PIB2:8400432.2 R$\n");
  scanf("%2f", &PIB2); //para a segunda carta
  printf("Pontos turísticos:43\n" );
  scanf("%s", &turisticos2);
- printf("Densidade2:%2f\n");
- scanf("%2f\n", densidade2);
- printf("PIBpercapita:%2f\n");
- scanf("%2f\n", PIBPerCapita2);
+//variáveis calculadas
+   float densidade1, densidade2;
+   float PIBpercapital1, PIBpercapital2;
 
-      //cálculo da densidade populacional
-densidade1 = 34316000/658190,05;
-densidade2 = 5168009/4329003,62;
-      //cálculo do PIBpercapita 
-      switch (unidadePIB) {
-      case 1: // Milhões 
-       PIBpercapita1 = PIB1 *1000000 /34316000;
-PIBpercapita2 = PIB2 *1000000/5168009; 
-         break;
-      case 2: Trilhões
-      PIBpercapita1 = PIB1 *1000000000000 /34316000;
-PIBpercapita2 = PIB2 *1000000000000/5168009;
-         break;
-      }
-PIBpercapita1 = PIB1 *1000000 /34316000;
-PIBpercapita2 = PIB2 *1000000/5168009; 
-   printf("A divisão é: %2f had/km²\n", divisao);
-   printf("A divisão é: %2fhad/km²\n", divisao);
-   printf("A divisão é: R$%2f\n", divisao);
-   printf("A divisão é: R$%2f\n", divisao);
+    // Cálculos
+    float densidade1 = populacao1 / area1;
+    float densidade2 = populacao2 / area2;
 
-}
+    float PIBpercapita1 = (PIB1 * 1000000) / populacao1;
+    float PIBpercapita2 = (PIB2 * 1000000) / populacao2;
 
- //exibicao da carta1 
-scanf("Se escolher a primeira carta exibir= Os dados da Primeira Carta");
-scanf("Carta1\n");
-scanf("estado: %d\n", estado1);
-scanf("codiga da carta: %d\n",codigo1);
-scanf("cidade: %d\n", cidade1);
-scanf("populacão: %d\n", populacao1);
-scanf("area: %e\n", area1);
-scanf("PIB: %2f\n", PIB1);
-scanf("pontos turisticos:%s\n",turisticos1);
-scanf("densidade:%2f\n", densidade1);
-sacnf("PIBpercapita:%2f\n", PIBPerCapita1);
+    // Exibição dos resultados
+    printf("=== Resultados das Cartas ===\n\n");
 
-//exibicao da carta2 
- scanf("Se escolher a sedunda carta exibir= Os Dados da Segunda Carta");
- scanf("carta2\n"); 
- scanf("estado2:%d\n", estado2);
- scanf("codigo da carta;%d\n", codigo2);
- scanf("cidade:%d\n", cidade2);
- scanf("população:%d\n", populacao2);
- scanf("area:%e\n", area2);
- scanf("PIB: %2f\n", PIB2);
- scanf("pontos turisticos:%s\n",turisticos2);
- scanf("densidade:%2f\n", densidade2);
- scanf("PIBpercapita:%2f", PIBPerCapita2);
+    printf("Carta 1 - São Luís:\n");
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per capita: R$ %.2f\n\n", PIBpercapita1);
 
- // final do jogo super trunfo
- scanf("final do jogo\n");
- printf("\nObrigardo por jogar!\n"); 
+    printf("Carta 2 - Rio Branco:\n");
+    printf("Densidade populacional: Carta 1 (São Luís) vence!\n");
+    printf("Densidade populacional: Empate.\n");
+    rintf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: R$ %.2f\n\n", PIBpercapita2);
 
- return 0; 
+    // Comparações
+    printf("=== Comparações ===\n");
+
+    i
+
+    if (PIBpercapita1 > PIBpercapita2) {
+        printf("PIB per capita: Carta 1 (São Luís) vence!\n");
+    } else if (PIBpercapita2 > PIBpercapita1) {
+        printf("PIB per capita: Carta 2 (Rio Branco) vence!\n");
+    } else {
+        printf("PIB per capita: Empate.\n");
+    }
+
+    return 0;
 }
